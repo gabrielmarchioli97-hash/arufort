@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARUFORT | Engenharia & Energia Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7DC31A',
+                        'bg-deep': '#0A0A0A',
+                        'bg-surface': '#121212',
+                        'glass-border': 'rgba(255, 255, 255, 0.08)',
+                        'text-dim': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'radial-gradient(circle at top right, rgba(125, 195, 26, 0.08), transparent 40%)',
+                        'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01))',
+                    },
+                    borderRadius: {
+                        'custom': '12px',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0A0A0A; color: #FFFFFF; overflow-x: hidden; line-height: 1.6; }
+        .text-gradient { background: linear-gradient(to bottom right, #FFFFFF 30%, #7DC31A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card:hover { border-color: #7DC31A; transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); box-shadow: 0 10px 30px -10px rgba(125, 195, 26, 0.2); }
+        .service-list li { position: relative; padding-left: 1.5rem; }
+        .service-list li::before { content: "→"; position: absolute; left: 0; color: #7DC31A; font-weight: bold; }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #7DC31A; }
+        .portfolio-img { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); filter: brightness(0.7); width: 100%; height: 100%; object-fit: cover; }
+        .portfolio-item:hover .portfolio-img { filter: brightness(1); transform: scale(1.05); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #1f1f1f; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7DC31A; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-[1000] backdrop-blur-xl bg-black/80 border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="logoarufort.png" alt="ARUFORT Logo" class="h-10 w-auto">
+            </a>
+            
+            <nav class="hidden md:block">
+                <ul class="flex gap-8 items-center text-[0.85rem] font-medium text-text-dim">
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="https://wa.me/5511979640873" target="_blank" class="glass-card px-5 py-2 rounded-custom text-[0.8rem] font-semibold uppercase tracking-wider hover:bg-white/10 transition-all">
+                Orçamento
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative min-h-screen flex items-center bg-hero-gradient px-6 pt-20">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 text-gradient font-display">
+                    Força para construir, energia para transformar.
+                </h1>
+                <p class="text-xl text-text-dim mb-12 max-w-2xl leading-relaxed">
+                    Soluções de engenharia civil, infraestrutura elétrica e mobilidade sustentável para setores corporativos e residenciais de alto padrão.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/5511979640873" target="_blank" class="bg-primary text-black px-8 py-4 rounded-custom font-bold text-sm uppercase tracking-widest hover:bg-transparent hover:text-primary hover:ring-2 hover:ring-primary transition-all duration-300">
+                        Fale com um Especialista
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-bg-surface border-y border-glass-border py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="stat-item group">
+                    <h4 class="text-2xl font-bold text-white mb-2 font-display uppercase tracking-tighter">Experiência</h4>
+                    <p class="text-xs uppercase tracking-[0.2em] text-primary">Sólida & Comprovada</p>
+                </div>
+                <div class="stat-item group">
+                    <h4 class="text-2xl font-bold text-white mb-2 font-display uppercase tracking-tighter">Sustentabilidade</h4>
+                    <p class="text-xs uppercase tracking-[0.2em] text-primary">Energia Limpa</p>
+                </div>
+                <div class="stat-item group">
+                    <h4 class="text-2xl font-bold text-white mb-2 font-display uppercase tracking-tighter">Rigor Técnico</h4>
+                    <p class="text-xs uppercase tracking-[0.2em] text-primary">Normas NR & ABNT</p>
+                </div>
+                <div class="stat-item group">
+                    <h4 class="text-2xl font-bold text-white mb-2 font-display uppercase tracking-tighter">Mobilidade</h4>
+                    <p class="text-xs uppercase tracking-[0.2em] text-primary">Infra Elétrica</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="servicos" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center lg:text-left">
+                <h2 class="text-4xl font-extrabold mb-4 font-display">Nossas Soluções</h2>
+                <p class="text-text-dim text-lg">Engenharia multidisciplinar com foco em eficiência.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-custom">
+                    <div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center mb-6 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Construção Civil</h3>
+                    <ul class="service-list text-sm text-text-dim space-y-2">
+                        <li>Muros de pedra/contenção</li>
+                        <li>Pisos intertravados</li>
+                        <li>Reformas estruturais</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-custom">
+                    <div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center mb-6 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Elétrica & Proteção</h3>
+                    <ul class="service-list text-sm text-text-dim space-y-2">
+                        <li>Laudo de Para-raios (SPDA)</li>
+                        <li>Projetos BT/MT industriais</li>
+                        <li>Adequação de carga</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-custom">
+                    <div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center mb-6 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8l1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Energia Solar</h3>
+                    <ul class="service-list text-sm text-text-dim space-y-2">
+                        <li>Sistemas On-Grid/Off-Grid</li>
+                        <li>Homologação completa</li>
+                        <li>Usinas Fotovoltaicas</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-custom">
+                    <div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center mb-6 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.5 2h-13C4.67 2 4 2.67 4 3.5V22h16V3.5c0-.83-.67-1.5-1.5-1.5zM7 8h10M7 12h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mobilidade Elétrica</h3>
+                    <ul class="service-list text-sm text-text-dim space-y-2">
+                        <li>Carregadores Veiculares</li>
+                        <li>Estações de recarga rápida</li>
+                        <li>Infraestrutura dedicada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 px-6 bg-bg-surface overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1">
+                    <h2 class="text-4xl font-extrabold mb-8 font-display uppercase tracking-tight">Atuação em Toda São Paulo</h2>
+                    <p class="text-lg text-text-dim mb-8 leading-relaxed">
+                        A ARUFORT opera com base estratégica em Arujá, estendendo nossa excelência técnica para a **Capital Paulista em um raio de até 250km**. Atendemos com prontidão todo o Litoral Paulista e as principais cidades do Interior de SP, garantindo suporte de engenharia onde quer que seu projeto esteja.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 border border-glass-border rounded-custom bg-white/5">
+                            <span class="text-primary font-bold">Litoral</span>
+                            <p class="text-xs text-text-dim">Cobertura completa em cidades litorâneas.</p>
+                        </div>
+                        <div class="p-4 border border-glass-border rounded-custom bg-white/5">
+                            <span class="text-primary font-bold">Interior</span>
+                            <p class="text-xs text-text-dim">Atendimento especializado em polos industriais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full relative">
+                    <div class="aspect-video lg:aspect-square w-full rounded-custom border border-glass-border bg-[#0f110c] flex flex-col items-center justify-center relative overflow-hidden">
+                        <img src="áreadeatuação.png" alt="Mapa de Área de Atuação ARUFORT - SP, Litoral e Interior" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 border border-primary/20 rounded-lg pointer-events-none opacity-40"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4 font-display">Nossas Obras em Detalhes</h2>
+                <p class="text-text-dim text-lg">Transparência e rigor técnico com a equipe ARUFORT em campo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item relative h-[400px] rounded-custom overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800" alt="Equipe Arufort Energia Solar" class="portfolio-img">
+                    <div class="absolute inset-0 z-20 flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/40 to-transparent">
+                        <span class="text-primary font-bold text-xs tracking-widest uppercase mb-2">Energia Solar</span>
+                        <h4 class="text-xl font-bold text-white">Instalação Fotovoltaica Industrial</h4>
+                        <p class="text-xs text-text-dim mt-2">Equipe ARUFORT uniformizada em operação de altura.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative h-[400px] rounded-custom overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800" alt="Equipe Arufort Carregador Veicular" class="portfolio-img">
+                    <div class="absolute inset-0 z-20 flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/40 to-transparent">
+                        <span class="text-primary font-bold text-xs tracking-widest uppercase mb-2">Mobilidade</span>
+                        <h4 class="text-xl font-bold text-white">Carregador Elétrico Veicular</h4>
+                        <p class="text-xs text-text-dim mt-2">Instalação de estação de recarga residencial de alto padrão.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item relative h-[400px] rounded-custom overflow-hidden group">
+                    <img src="portfolio_civil.png" alt="ARUFORT Engenharia Civil: Muros de Arrimo e Piso Bloquete" class="portfolio-img">
+                    <div class="absolute inset-0 z-20 flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/40 to-transparent">
+                        <span class="text-primary font-bold text-xs tracking-widest uppercase mb-2">Engenharia Civil</span>
+                        <h4 class="text-xl font-bold text-white">Contenção e Pavimentação</h4>
+                        <p class="text-xs text-text-dim mt-2">Execução de muro de pedra por técnicos especializados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-bg-deep border-t border-glass-border pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div>
+                    <img src="logoarufort.png" alt="ARUFORT Logo" class="h-10 w-auto mb-6">
+                    <p class="text-text-dim text-sm leading-relaxed">
+                        Excelência em engenharia e soluções energéticas sustentáveis para o mercado corporativo e industrial.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-8">Navegação</h4>
+                    <ul class="space-y-4 text-text-dim text-sm">
+                        <li><a href="#servicos" class="hover:text-primary transition-colors">Soluções</a></li>
+                        <li><a href="#sobre" class="hover:text-primary transition-colors">Área de Atuação</a></li>
+                        <li><a href="#portfolio" class="hover:text-primary transition-colors">Obras</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-8">Fale Conosco</h4>
+                    <ul class="space-y-4 text-text-dim text-sm">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            (11) 97964-0873
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            contato@arufort.com.br
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-primary font-bold text-lg mb-8">Matriz</h4>
+                    <p class="text-text-dim text-sm leading-relaxed">
+                        Estrada dos Índios, 2465,<br>
+                        Arujazinho I, II e III,<br>
+                        Arujá/SP
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-glass-border flex flex-wrap justify-between items-center gap-6">
+                <p class="text-text-dim text-xs">
+                    &copy; 2026 ARUFORT Engenharia. Atendimento capital, interior e litoral paulista.
+                </p>
+                <img src="logoarufort.png" alt="ARUFORT Logo" class="h-6 w-auto opacity-50 grayscale">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll adjustment
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                e.preventDefault();
+                const element = document.querySelector(targetId);
+                const headerOffset = 100;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            });
+        });
+
+        // Simple Fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.glass-card, .portfolio-item, .stat-item').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
